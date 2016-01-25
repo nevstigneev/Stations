@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		6081901D1C563386009F7931 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081901C1C563386009F7931 /* main.m */; };
-		608190201C563386009F7931 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081901F1C563386009F7931 /* AppDelegate.m */; };
-		608190231C563386009F7931 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 608190221C563386009F7931 /* ViewController.m */; };
+		608190201C563386009F7931 /* TTRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081901F1C563386009F7931 /* TTRAppDelegate.m */; };
 		608190261C563386009F7931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608190241C563386009F7931 /* Main.storyboard */; };
 		608190281C563386009F7931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 608190271C563386009F7931 /* Assets.xcassets */; };
 		6081902B1C563386009F7931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608190291C563386009F7931 /* LaunchScreen.storyboard */; };
 		608190361C563386009F7931 /* StationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 608190351C563386009F7931 /* StationsTests.m */; };
+		608190421C56416F009F7931 /* TTRTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 608190411C56416F009F7931 /* TTRTextField.m */; };
+		6081904D1C56A5CD009F7931 /* TTRScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081904C1C56A5CD009F7931 /* TTRScheduleViewController.m */; };
+		608190511C56DE4A009F7931 /* TTRStationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 608190501C56DE4A009F7931 /* TTRStationsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,10 +31,8 @@
 /* Begin PBXFileReference section */
 		608190181C563386009F7931 /* Stations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6081901C1C563386009F7931 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6081901E1C563386009F7931 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		6081901F1C563386009F7931 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		608190211C563386009F7931 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		608190221C563386009F7931 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6081901E1C563386009F7931 /* TTRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTRAppDelegate.h; sourceTree = "<group>"; };
+		6081901F1C563386009F7931 /* TTRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTRAppDelegate.m; sourceTree = "<group>"; };
 		608190251C563386009F7931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		608190271C563386009F7931 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6081902A1C563386009F7931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +40,12 @@
 		608190311C563386009F7931 /* StationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		608190351C563386009F7931 /* StationsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationsTests.m; sourceTree = "<group>"; };
 		608190371C563386009F7931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		608190401C56416F009F7931 /* TTRTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRTextField.h; sourceTree = "<group>"; };
+		608190411C56416F009F7931 /* TTRTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRTextField.m; sourceTree = "<group>"; };
+		6081904B1C56A5CD009F7931 /* TTRScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRScheduleViewController.h; sourceTree = "<group>"; };
+		6081904C1C56A5CD009F7931 /* TTRScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRScheduleViewController.m; sourceTree = "<group>"; };
+		6081904F1C56DE4A009F7931 /* TTRStationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRStationsTableViewController.h; sourceTree = "<group>"; };
+		608190501C56DE4A009F7931 /* TTRStationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRStationsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,25 +87,14 @@
 		6081901A1C563386009F7931 /* Stations */ = {
 			isa = PBXGroup;
 			children = (
-				6081901E1C563386009F7931 /* AppDelegate.h */,
-				6081901F1C563386009F7931 /* AppDelegate.m */,
-				608190211C563386009F7931 /* ViewController.h */,
-				608190221C563386009F7931 /* ViewController.m */,
-				608190241C563386009F7931 /* Main.storyboard */,
-				608190271C563386009F7931 /* Assets.xcassets */,
-				608190291C563386009F7931 /* LaunchScreen.storyboard */,
-				6081902C1C563386009F7931 /* Info.plist */,
-				6081901B1C563386009F7931 /* Supporting Files */,
-			);
-			path = Stations;
-			sourceTree = "<group>";
-		};
-		6081901B1C563386009F7931 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
+				608190431C56A390009F7931 /* InfoPlists */,
+				608190441C56A398009F7931 /* Resources */,
+				608190451C56A49D009F7931 /* Sources */,
+				6081901E1C563386009F7931 /* TTRAppDelegate.h */,
+				6081901F1C563386009F7931 /* TTRAppDelegate.m */,
 				6081901C1C563386009F7931 /* main.m */,
 			);
-			name = "Supporting Files";
+			path = Stations;
 			sourceTree = "<group>";
 		};
 		608190341C563386009F7931 /* StationsTests */ = {
@@ -109,6 +104,85 @@
 				608190371C563386009F7931 /* Info.plist */,
 			);
 			path = StationsTests;
+			sourceTree = "<group>";
+		};
+		608190431C56A390009F7931 /* InfoPlists */ = {
+			isa = PBXGroup;
+			children = (
+				6081902C1C563386009F7931 /* Info.plist */,
+			);
+			name = InfoPlists;
+			sourceTree = "<group>";
+		};
+		608190441C56A398009F7931 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				608190271C563386009F7931 /* Assets.xcassets */,
+				608190291C563386009F7931 /* LaunchScreen.storyboard */,
+				608190241C563386009F7931 /* Main.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		608190451C56A49D009F7931 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				608190461C56A4C3009F7931 /* Application */,
+				608190481C56A4E8009F7931 /* Domain */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		608190461C56A4C3009F7931 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				608190471C56A4E0009F7931 /* Pages */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		608190471C56A4E0009F7931 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				6081904A1C56A551009F7931 /* SchedulePage */,
+				608190521C56DE52009F7931 /* StationsPage */,
+			);
+			name = Pages;
+			sourceTree = "<group>";
+		};
+		608190481C56A4E8009F7931 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				608190491C56A4F7009F7931 /* Entities */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		608190491C56A4F7009F7931 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		6081904A1C56A551009F7931 /* SchedulePage */ = {
+			isa = PBXGroup;
+			children = (
+				608190401C56416F009F7931 /* TTRTextField.h */,
+				608190411C56416F009F7931 /* TTRTextField.m */,
+				6081904B1C56A5CD009F7931 /* TTRScheduleViewController.h */,
+				6081904C1C56A5CD009F7931 /* TTRScheduleViewController.m */,
+			);
+			name = SchedulePage;
+			sourceTree = "<group>";
+		};
+		608190521C56DE52009F7931 /* StationsPage */ = {
+			isa = PBXGroup;
+			children = (
+				6081904F1C56DE4A009F7931 /* TTRStationsTableViewController.h */,
+				608190501C56DE4A009F7931 /* TTRStationsTableViewController.m */,
+			);
+			name = StationsPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +229,7 @@
 		608190101C563386009F7931 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TTR;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Nikolay Evstigneev";
 				TargetAttributes = {
@@ -211,8 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				608190231C563386009F7931 /* ViewController.m in Sources */,
-				608190201C563386009F7931 /* AppDelegate.m in Sources */,
+				6081904D1C56A5CD009F7931 /* TTRScheduleViewController.m in Sources */,
+				608190511C56DE4A009F7931 /* TTRStationsTableViewController.m in Sources */,
+				608190421C56416F009F7931 /* TTRTextField.m in Sources */,
+				608190201C563386009F7931 /* TTRAppDelegate.m in Sources */,
 				6081901D1C563386009F7931 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +481,7 @@
 				6081903C1C563386009F7931 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6081903D1C563386009F7931 /* Build configuration list for PBXNativeTarget "StationsTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +490,7 @@
 				6081903F1C563386009F7931 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

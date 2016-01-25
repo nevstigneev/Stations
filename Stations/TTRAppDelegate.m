@@ -6,13 +6,13 @@
 //  Copyright © 2016 Nikolay Evstigneev. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "TTRAppDelegate.h"
 
-@interface AppDelegate ()
+@interface TTRAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation TTRAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
