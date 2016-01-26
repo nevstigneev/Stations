@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="О приложении" id="1MB-1u-PCu"/>
+                    <tabBarItem key="tabBarItem" title="О приложении" image="info" id="1MB-1u-PCu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sdd-Ga-rvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="786" y="792"/>
         </scene>
-        <!--Schedule View Controller-->
+        <!--Расписание-->
         <scene sceneID="wdR-Vc-yfN">
             <objects>
                 <viewController id="3zv-Uh-jEZ" customClass="TTRScheduleViewController" sceneMemberID="viewController">
@@ -45,7 +45,6 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                         <connections>
                                             <outlet property="delegate" destination="3zv-Uh-jEZ" id="D4D-qG-91W"/>
-                                            <segue destination="Wn0-iL-l2p" kind="show" identifier="TTRStationFromSegue" id="mZo-vK-aJT"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mFT-PZ-ofc" customClass="TTRTextField">
@@ -59,7 +58,6 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                         <connections>
                                             <outlet property="delegate" destination="3zv-Uh-jEZ" id="uWM-lH-tPb"/>
-                                            <segue destination="Wn0-iL-l2p" kind="show" identifier="TTRStationToSegue" id="TXE-zE-qyl"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -86,7 +84,11 @@
                             <constraint firstItem="tZ4-WN-qiT" firstAttribute="leading" secondItem="hVo-bf-Sht" secondAttribute="leading" id="hFH-LP-2Ym"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Ooy-bp-sWI"/>
+                    <navigationItem key="navigationItem" title="Расписание" id="Ooy-bp-sWI"/>
+                    <connections>
+                        <segue destination="Wn0-iL-l2p" kind="show" identifier="TTRStationFromSegue" id="dgL-fW-Gze"/>
+                        <segue destination="Wn0-iL-l2p" kind="show" identifier="TTRStationToSegue" id="Shu-cb-yRg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xb2-Ux-SeN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,13 +98,13 @@
         <scene sceneID="DNf-VS-pgc">
             <objects>
                 <tableViewController id="Wn0-iL-l2p" customClass="TTRStationsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ucp-Jd-7Zx">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="ucp-Jd-7Zx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TTRStationCell" id="boa-5R-0Ae">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="114" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="boa-5R-0Ae" id="35o-9j-ccQ">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -142,7 +144,7 @@
         <scene sceneID="6NW-I8-qC3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rms-7K-d64" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Расписание" id="H0x-3C-Iak"/>
+                    <tabBarItem key="tabBarItem" title="Расписание" image="schedule" id="H0x-3C-Iak"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kiw-Ye-cjo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -158,7 +160,11 @@
             <point key="canvasLocation" x="786" y="132"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info" width="14" height="30"/>
+        <image name="schedule" width="23" height="30"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TXE-zE-qyl"/>
+        <segue reference="Shu-cb-yRg"/>
     </inferredMetricsTieBreakers>
 </document>

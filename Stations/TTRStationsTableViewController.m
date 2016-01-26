@@ -7,10 +7,12 @@
 //
 
 #import "TTRStationsTableViewController.h"
+#import "TTRStationFetcher.h"
 
 @interface TTRStationsTableViewController () <UISearchResultsUpdating>
 
 @property (strong, nonatomic) UISearchController *searchController;
+@property (strong, nonatomic) TTRStationFetcher *stationFetcher;
 
 @end
 
@@ -20,6 +22,14 @@
     [super viewDidLoad];
     [self setupNavigationBar];
     [self setupSearchController];
+    self.stationFetcher = [[TTRStationFetcher alloc] init];
+    [self.stationFetcher fetchStationsFromFileWithCompletion:^(NSDictionary *data, NSError *error) {
+        if (!error) {
+            NSLog(@"done");
+        } else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+    }];
 }
 
 - (void)setupNavigationBar {

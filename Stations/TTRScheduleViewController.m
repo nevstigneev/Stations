@@ -9,7 +9,7 @@
 #import "TTRScheduleViewController.h"
 #import "TTRTextField.h"
 
-typedef NS_ENUM(NSUInteger, TTRTextFieldIndex) {
+typedef NS_ENUM(NSInteger, TTRTextFieldIndex) {
     TTRTextFieldIndexFrom,
     TTRTextFieldIndexTo,
     TTRTextFieldIndexDate
@@ -25,9 +25,9 @@ typedef NS_ENUM(NSUInteger, TTRTextFieldIndex) {
 
 - (void)textFieldRightButtonTapped:(TTRTextField *)textField {
     if (textField.tag == TTRTextFieldIndexFrom) {
-        [self performSegueWithIdentifier:@"TTRStationFromSegue" sender:nil];
+        [self performSegueWithIdentifier:@"TTRStationFromSegue" sender:textField];
     } else if (textField.tag == TTRTextFieldIndexTo) {
-        [self performSegueWithIdentifier:@"TTRStationToSegue" sender:nil];
+        [self performSegueWithIdentifier:@"TTRStationToSegue" sender:textField];
     } else if (textField.tag == TTRTextFieldIndexDate) {
         //
     }
