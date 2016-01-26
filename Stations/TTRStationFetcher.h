@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class TTRCity;
+
 @interface TTRStationFetcher : NSObject
 
-- (void)fetchStationsFromFileWithCompletion:(void (^)(NSDictionary *data, NSError *error))completionHandler;
+- (void)fetchStationsFromFileWithCompletion:(void (^)(NSArray<TTRCity *> *data, NSError *error))completionHandler;
 
 @end
