@@ -10,6 +10,7 @@
 #import "TTRStationFetcher.h"
 #import "TTRCity.h"
 #import "TTRStation.h"
+#import "TTRStationDetailViewController.h"
 
 @interface TTRStationsTableViewController () <UISearchResultsUpdating>
 
@@ -55,7 +56,12 @@
     self.searchController.hidesNavigationBarDuringPresentation = NO;
     self.searchController.searchBar.searchBarStyle = UISearchBarStyleMinimal;
     self.searchController.searchBar.placeholder = @"";
-    [self.searchController.searchBar setValue:@"Отмена" forKey:@"cancelButtonText"];
+    @try {
+        [self.searchController.searchBar setValue:@"Отмена" forKey:@"cancelButtonText"];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"%@", exception.description);
+    }
     self.navigationItem.titleView = self.searchController.searchBar;
     self.definesPresentationContext = YES;
     [self.searchController.searchBar sizeToFit];
@@ -116,6 +122,18 @@
     }
 }
 
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section >= self.cities.count) {
+        return;
+    }
+    TTRCity *city = self.cities[indexPath.section];
+    if (indexPath.row >= city.stations.count) {
+        return;
+    }
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [self performSegueWithIdentifier:@"TTRStationDetailSegue" sender:cell];
+}
+
 #pragma mark - UISearchResultsUpdating
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
@@ -138,6 +156,19 @@
             });
         });
     }];
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"TTRStationDetailSegue"]) {
+        UITableViewCell *cell = (UITableViewCell *)sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        TTRCity *city = self.cities[indexPath.section];
+        TTRStation *station = city.stations[indexPath.row];
+        TTRStationDetailViewController *vc = (TTRStationDetailViewController *)segue.destinationViewController;
+        vc.station = station;
+    }
 }
 
 - (void)dealloc {

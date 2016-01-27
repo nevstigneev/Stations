@@ -21,6 +21,7 @@
 		6081905D1C578D09009F7931 /* TTRStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081905C1C578D09009F7931 /* TTRStation.m */; };
 		608190601C57934C009F7931 /* TTRCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081905F1C57934C009F7931 /* TTRCity.m */; };
 		608190711C58DCB3009F7931 /* TTRDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 608190701C58DCB3009F7931 /* TTRDateViewController.m */; };
+		608190751C592778009F7931 /* TTRStationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 608190741C592778009F7931 /* TTRStationDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		6081906B1C58CE64009F7931 /* TTRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRConstants.h; sourceTree = "<group>"; };
 		6081906F1C58DCB3009F7931 /* TTRDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRDateViewController.h; sourceTree = "<group>"; };
 		608190701C58DCB3009F7931 /* TTRDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRDateViewController.m; sourceTree = "<group>"; };
+		608190731C592778009F7931 /* TTRStationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRStationDetailViewController.h; sourceTree = "<group>"; };
+		608190741C592778009F7931 /* TTRStationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRStationDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,7 @@
 				6081904A1C56A551009F7931 /* SchedulePage */,
 				608190521C56DE52009F7931 /* StationsPage */,
 				6081906E1C58DC8B009F7931 /* DatePage */,
+				608190721C59274B009F7931 /* StationDetailPage */,
 			);
 			name = Pages;
 			sourceTree = "<group>";
@@ -234,6 +238,15 @@
 				608190701C58DCB3009F7931 /* TTRDateViewController.m */,
 			);
 			name = DatePage;
+			sourceTree = "<group>";
+		};
+		608190721C59274B009F7931 /* StationDetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				608190731C592778009F7931 /* TTRStationDetailViewController.h */,
+				608190741C592778009F7931 /* TTRStationDetailViewController.m */,
+			);
+			name = StationDetailPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +353,7 @@
 			files = (
 				6081904D1C56A5CD009F7931 /* TTRScheduleViewController.m in Sources */,
 				608190511C56DE4A009F7931 /* TTRStationsTableViewController.m in Sources */,
+				608190751C592778009F7931 /* TTRStationDetailViewController.m in Sources */,
 				608190421C56416F009F7931 /* TTRTextField.m in Sources */,
 				6081905A1C57813B009F7931 /* TTRStationFetcher.m in Sources */,
 				608190201C563386009F7931 /* TTRAppDelegate.m in Sources */,
