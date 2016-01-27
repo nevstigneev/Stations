@@ -19,7 +19,7 @@
 @property (assign, nonatomic, readonly) NSInteger cityId;
 @property (copy, nonatomic, readonly) NSString *cityTitle;
 @property (copy, nonatomic, readonly) NSString *regionTitle;
-@property (strong, nonatomic, readonly) NSArray<TTRStation *> *stations;
+@property (strong, nonatomic, readwrite) NSArray<TTRStation *> *stations;
 
 - (instancetype)initWithCountryTitle:(NSString *)countryTitle point:(TTRPoint)point districtTitle:(NSString *)districtTitle
                               cityId:(NSInteger)cityId cityTitle:(NSString *)cityTitle regionTitle:(NSString *)regionTitle

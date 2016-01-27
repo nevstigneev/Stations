@@ -83,6 +83,9 @@
 }
 
 - (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+//    if (section >= self.cities.count) {
+//        return nil;
+//    }
     TTRCity *city = self.cities[section];
     return [NSString stringWithFormat:@"%@, %@", city.cityTitle, city.countryTitle];
 }
@@ -90,8 +93,25 @@
 #pragma mark - UISearchResultsUpdating
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
-//    NSString *searchString = searchController.searchBar.text;
-    [self.tableView reloadData];
+    NSString *searchString = searchController.searchBar.text;
+    if (!searchString.length) {
+        [self refreshTable];
+        return;
+    }
+    NSPredicate *stationPredicate = [NSPredicate predicateWithFormat:@"stationTitle CONTAINS[c] %@", searchString];
+    NSPredicate *cityPredicate = [NSPredicate predicateWithFormat:@"stations.@count > 0"];
+    [self.stationFetcher fetchStationsFromFileWithCompletion:^(NSArray<TTRCity *> *data, NSError *error) {
+        self.cities = data;
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            for (TTRCity *city in self.cities) {
+                city.stations = [city.stations filteredArrayUsingPredicate:stationPredicate];
+            }
+            self.cities = [self.cities filteredArrayUsingPredicate:cityPredicate];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
+        });
+    }];
 }
 
 - (void)dealloc {
