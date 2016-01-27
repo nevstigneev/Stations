@@ -94,6 +94,8 @@
                     <navigationItem key="navigationItem" title="Расписание" id="Ooy-bp-sWI"/>
                     <connections>
                         <outlet property="dateControl" destination="Z50-qR-wf9" id="zGY-ID-eef"/>
+                        <outlet property="departureField" destination="D9s-W6-ZRV" id="t8Q-5G-2Gi"/>
+                        <outlet property="destinationField" destination="OBD-3b-3oQ" id="NdJ-rL-409"/>
                         <segue destination="Wn0-iL-l2p" kind="show" identifier="TTRDepartureSegue" id="dgL-fW-Gze"/>
                         <segue destination="Wn0-iL-l2p" kind="show" identifier="TTRDestinationSegue" id="Shu-cb-yRg"/>
                         <segue destination="2Y5-ie-laU" kind="presentation" identifier="TTRDateSegue" id="x0V-iM-W50"/>

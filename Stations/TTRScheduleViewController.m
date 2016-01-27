@@ -23,8 +23,10 @@ typedef NS_ENUM(NSInteger, TTRSegmentIndex) {
     TTRSegmentIndexSelect
 };
 
-@interface TTRScheduleViewController () <TTRTextFieldDelegate, TTRDateViewControllerDelegate>
+@interface TTRScheduleViewController () <TTRTextFieldDelegate, TTRStationsTableViewControllerDelegate, TTRDateViewControllerDelegate>
 
+@property (weak, nonatomic) IBOutlet TTRTextField *departureField;
+@property (weak, nonatomic) IBOutlet TTRTextField *destinationField;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *dateControl;
 
 @end
@@ -54,6 +56,17 @@ typedef NS_ENUM(NSInteger, TTRSegmentIndex) {
     }
 }
 
+#pragma mark - TTRStationsTableViewControllerDelegate
+
+- (void)stationsTableViewController:(TTRStationsTableViewController *)vc stationSelected:(NSString *)title {
+    if (vc.citiesType == TTRCitiesTypeDeparture) {
+        self.departureField.text = title;
+    } else if (vc.citiesType == TTRCitiesTypeDestination) {
+        self.destinationField.text = title;
+    }
+    [vc.navigationController popViewControllerAnimated:YES];
+}
+
 #pragma mark - TTRDateViewControllerDelegate
 
 - (void)dateViewControllerCancelButtonTapped:(TTRDateViewController *)vc {
@@ -76,12 +89,14 @@ typedef NS_ENUM(NSInteger, TTRSegmentIndex) {
     if ([segue.identifier isEqualToString:@"TTRDepartureSegue"]) {
         TTRStationsTableViewController *vc = (TTRStationsTableViewController *)segue.destinationViewController;
         vc.citiesType = TTRCitiesTypeDeparture;
+        vc.delegate = self;
     } else if ([segue.identifier isEqualToString:@"TTRDestinationSegue"]) {
         TTRStationsTableViewController *vc = (TTRStationsTableViewController *)segue.destinationViewController;
         vc.citiesType = TTRCitiesTypeDestination;
+        vc.delegate = self;
     } else if ([segue.identifier isEqualToString:@"TTRDateSegue"]) {
         UINavigationController *nav = (UINavigationController *)segue.destinationViewController;
-        TTRDateViewController *vc = nav.viewControllers.firstObject;
+        TTRDateViewController *vc = (TTRDateViewController *)nav.viewControllers.firstObject;
         vc.delegate = self;
     }
 }

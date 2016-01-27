@@ -99,6 +99,23 @@
     }
 }
 
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section >= self.cities.count) {
+        return;
+    }
+    TTRCity *city = self.cities[indexPath.section];
+    if (indexPath.row >= city.stations.count) {
+        return;
+    }
+    TTRStation *station = city.stations[indexPath.row];
+    if ([self.delegate respondsToSelector:@selector(stationsTableViewController:stationSelected:)]) {
+        [self.delegate stationsTableViewController:self stationSelected:station.stationTitle];
+    }
+}
+
 #pragma mark - UISearchResultsUpdating
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
