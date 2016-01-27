@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TTRConstants.h"
 
 @class TTRCity;
 
 @interface TTRStationFetcher : NSObject
 
+- (instancetype)initWithCitiesType:(TTRCitiesType)type;
 - (void)fetchStationsFromFileWithCompletion:(void (^)(NSArray<TTRCity *> *data, NSError *error))completionHandler;
 
 @end

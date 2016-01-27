@@ -58,6 +58,7 @@
 		6081905E1C57934C009F7931 /* TTRCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRCity.h; sourceTree = "<group>"; };
 		6081905F1C57934C009F7931 /* TTRCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRCity.m; sourceTree = "<group>"; };
 		608190611C579675009F7931 /* TTRPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRPoint.h; sourceTree = "<group>"; };
+		6081906B1C58CE64009F7931 /* TTRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +143,7 @@
 			children = (
 				608190461C56A4C3009F7931 /* Application */,
 				608190481C56A4E8009F7931 /* Domain */,
+				608190691C58CE19009F7931 /* Utilities */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -211,6 +213,14 @@
 				608190591C57813B009F7931 /* TTRStationFetcher.m */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		608190691C58CE19009F7931 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6081906B1C58CE64009F7931 /* TTRConstants.h */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

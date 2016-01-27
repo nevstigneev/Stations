@@ -8,6 +8,7 @@
 
 #import "TTRScheduleViewController.h"
 #import "TTRTextField.h"
+#import "TTRStationsTableViewController.h"
 
 typedef NS_ENUM(NSInteger, TTRTextFieldIndex) {
     TTRTextFieldIndexFrom,
@@ -30,6 +31,18 @@ typedef NS_ENUM(NSInteger, TTRTextFieldIndex) {
         [self performSegueWithIdentifier:@"TTRStationToSegue" sender:textField];
     } else if (textField.tag == TTRTextFieldIndexDate) {
         //
+    }
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"TTRStationFromSegue"]) {
+        TTRStationsTableViewController *vc = (TTRStationsTableViewController *)segue.destinationViewController;
+        vc.citiesType = TTRCitiesTypeDeparture;
+    } else if ([segue.identifier isEqualToString:@"TTRStationToSegue"]) {
+        TTRStationsTableViewController *vc = (TTRStationsTableViewController *)segue.destinationViewController;
+        vc.citiesType = TTRCitiesTypeDestination;
     }
 }
 

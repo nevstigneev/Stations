@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TTRConstants.h"
 
 @interface TTRStationsTableViewController : UITableViewController
+
+@property (assign, nonatomic) TTRCitiesType citiesType;
 
 @end

@@ -26,7 +26,7 @@
     [self setupNavigationBar];
     [self setupSearchController];
     self.cities = [[NSArray alloc] init];
-    self.stationFetcher = [[TTRStationFetcher alloc] init];
+    self.stationFetcher = [[TTRStationFetcher alloc] initWithCitiesType:self.citiesType];
     [self refreshTable];
 
 }
@@ -64,17 +64,25 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    TTRCity *city = self.cities[section];
-    NSArray<TTRStation *> *stations = city.stations;
-    return stations.count;
+    if (section < self.cities.count) {
+        TTRCity *city = self.cities[section];
+        NSArray<TTRStation *> *stations = city.stations;
+        return stations.count;
+    } else {
+        return 0;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"TTRStationCell" forIndexPath:indexPath];
-    TTRCity *city = self.cities[indexPath.section];
-    NSArray<TTRStation *> *stations = city.stations;
-    TTRStation *station = stations[indexPath.row];
-    cell.textLabel.text = station.stationTitle;
+    if (indexPath.section < self.cities.count) {
+        TTRCity *city = self.cities[indexPath.section];
+        NSArray<TTRStation *> *stations = city.stations;
+        if (indexPath.row < stations.count) {
+            TTRStation *station = stations[indexPath.row];
+            cell.textLabel.text = station.stationTitle;
+        }
+    }
     return cell;
 }
 
@@ -83,11 +91,12 @@
 }
 
 - (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-//    if (section >= self.cities.count) {
-//        return nil;
-//    }
-    TTRCity *city = self.cities[section];
-    return [NSString stringWithFormat:@"%@, %@", city.cityTitle, city.countryTitle];
+    if (section < self.cities.count) {
+        TTRCity *city = self.cities[section];
+        return [NSString stringWithFormat:@"%@, %@", city.cityTitle, city.countryTitle];
+    } else {
+        return nil;
+    }
 }
 
 #pragma mark - UISearchResultsUpdating

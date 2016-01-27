@@ -10,7 +10,29 @@
 #import "TTRCity.h"
 #import "TTRStation.h"
 
+@interface TTRStationFetcher ()
+
+@property (copy, nonatomic, readonly) NSString *citiesTypeKey;
+
+@end
+
 @implementation TTRStationFetcher
+
+- (instancetype)init {
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"Precondition failed." userInfo:nil];
+}
+
+- (instancetype)initWithCitiesType:(TTRCitiesType)type {
+    self = [super init];
+    if (self) {
+        if (type == TTRCitiesTypeDeparture) {
+            _citiesTypeKey = @"citiesFrom";
+        } else if (type == TTRCitiesTypeDestination) {
+            _citiesTypeKey = @"citiesTo";
+        }
+    }
+    return self;
+}
 
 - (void)fetchStationsFromFileWithCompletion:(void (^)(NSArray<TTRCity *> *data, NSError *error))completionHandler {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -35,7 +57,7 @@
 #pragma mark - Private
 
 - (NSArray<TTRCity *> *)parseCities:(NSDictionary *)data error:(NSError **)error {
-    NSArray *citiesFrom = data[@"citiesFrom"];
+    NSArray *citiesFrom = data[self.citiesTypeKey];
     NSMutableArray<TTRCity *> *result = [[NSMutableArray alloc] init];
     for (NSDictionary *city in citiesFrom) {
         NSString *countryTitle = city[@"countryTitle"];
