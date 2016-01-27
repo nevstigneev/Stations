@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--О приложении-->
@@ -37,9 +38,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZ4-WN-qiT">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="186"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="184"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="D9s-W6-ZRV" customClass="TTRTextField">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="От" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="D9s-W6-ZRV" customClass="TTRTextField">
                                         <rect key="frame" x="28" y="72" width="544" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
@@ -47,12 +48,7 @@
                                             <outlet property="delegate" destination="3zv-Uh-jEZ" id="D4D-qG-91W"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mFT-PZ-ofc" customClass="TTRTextField">
-                                        <rect key="frame" x="28" y="148" width="544" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OBD-3b-3oQ" customClass="TTRTextField">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="До" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OBD-3b-3oQ" customClass="TTRTextField">
                                         <rect key="frame" x="28" y="110" width="544" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
@@ -60,20 +56,31 @@
                                             <outlet property="delegate" destination="3zv-Uh-jEZ" id="uWM-lH-tPb"/>
                                         </connections>
                                     </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Z50-qR-wf9">
+                                        <rect key="frame" x="28" y="148" width="544" height="29"/>
+                                        <segments>
+                                            <segment title="Сегодня"/>
+                                            <segment title="Завтра"/>
+                                            <segment title="Выбрать..."/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentChanged:" destination="3zv-Uh-jEZ" eventType="valueChanged" id="xqF-27-Sro"/>
+                                        </connections>
+                                    </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="D9s-W6-ZRV" secondAttribute="trailing" constant="28" id="Arb-4U-WRk"/>
-                                    <constraint firstItem="mFT-PZ-ofc" firstAttribute="top" secondItem="OBD-3b-3oQ" secondAttribute="bottom" constant="8" id="GBh-jf-bRN"/>
                                     <constraint firstItem="OBD-3b-3oQ" firstAttribute="leading" secondItem="tZ4-WN-qiT" secondAttribute="leading" constant="28" id="GGe-QH-aDb"/>
                                     <constraint firstAttribute="trailing" secondItem="OBD-3b-3oQ" secondAttribute="trailing" constant="28" id="Lmh-nO-Vvm"/>
-                                    <constraint firstAttribute="height" constant="186" id="ZXT-e9-7Nr"/>
+                                    <constraint firstItem="Z50-qR-wf9" firstAttribute="leading" secondItem="tZ4-WN-qiT" secondAttribute="leading" constant="28" id="M82-fJ-JYj"/>
+                                    <constraint firstItem="Z50-qR-wf9" firstAttribute="top" secondItem="OBD-3b-3oQ" secondAttribute="bottom" constant="8" id="VZz-Fy-LJB"/>
+                                    <constraint firstAttribute="height" constant="184" id="ZXT-e9-7Nr"/>
                                     <constraint firstItem="D9s-W6-ZRV" firstAttribute="leading" secondItem="tZ4-WN-qiT" secondAttribute="leading" constant="28" id="ibt-Jx-bg5"/>
-                                    <constraint firstAttribute="trailing" secondItem="mFT-PZ-ofc" secondAttribute="trailing" constant="28" id="mQ3-C3-IdU"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z50-qR-wf9" secondAttribute="trailing" constant="28" id="kGQ-1h-lCh"/>
                                     <constraint firstItem="D9s-W6-ZRV" firstAttribute="top" secondItem="tZ4-WN-qiT" secondAttribute="top" constant="72" id="sPt-tu-lYG"/>
+                                    <constraint firstAttribute="bottom" secondItem="Z50-qR-wf9" secondAttribute="bottom" constant="8" id="t38-mv-p8o"/>
                                     <constraint firstItem="OBD-3b-3oQ" firstAttribute="top" secondItem="D9s-W6-ZRV" secondAttribute="bottom" constant="8" id="zO2-Om-vP0"/>
-                                    <constraint firstItem="mFT-PZ-ofc" firstAttribute="leading" secondItem="tZ4-WN-qiT" secondAttribute="leading" constant="28" id="zVB-AA-reU"/>
-                                    <constraint firstAttribute="bottom" secondItem="mFT-PZ-ofc" secondAttribute="bottom" constant="8" id="zhJ-3W-7gB"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -86,8 +93,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Расписание" id="Ooy-bp-sWI"/>
                     <connections>
-                        <segue destination="Wn0-iL-l2p" kind="show" identifier="TTRStationFromSegue" id="dgL-fW-Gze"/>
-                        <segue destination="Wn0-iL-l2p" kind="show" identifier="TTRStationToSegue" id="Shu-cb-yRg"/>
+                        <outlet property="dateControl" destination="Z50-qR-wf9" id="zGY-ID-eef"/>
+                        <segue destination="Wn0-iL-l2p" kind="show" identifier="TTRDepartureSegue" id="dgL-fW-Gze"/>
+                        <segue destination="Wn0-iL-l2p" kind="show" identifier="TTRDestinationSegue" id="Shu-cb-yRg"/>
+                        <segue destination="2Y5-ie-laU" kind="presentation" identifier="TTRDateSegue" id="x0V-iM-W50"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xb2-Ux-SeN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -121,6 +130,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edc-Cz-RtO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2350" y="-256"/>
+        </scene>
+        <!--Выбрать дату-->
+        <scene sceneID="XG9-KP-bqe">
+            <objects>
+                <viewController id="Cxm-9h-o3d" customClass="TTRDateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jSi-fz-Wtr"/>
+                        <viewControllerLayoutGuide type="bottom" id="myD-Wg-Zff"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HRu-aU-hiE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="CiW-vr-KVx">
+                                <rect key="frame" x="0.0" y="192" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="475585766.57623899">
+                                    <!--2016-01-27 11:09:26 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CiW-vr-KVx" firstAttribute="centerX" secondItem="HRu-aU-hiE" secondAttribute="centerX" id="5Rc-gj-eQs"/>
+                            <constraint firstItem="CiW-vr-KVx" firstAttribute="centerY" secondItem="HRu-aU-hiE" secondAttribute="centerY" id="HX3-R9-vgN"/>
+                            <constraint firstItem="CiW-vr-KVx" firstAttribute="leading" secondItem="HRu-aU-hiE" secondAttribute="leadingMargin" constant="-20" id="feW-Cn-czb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CiW-vr-KVx" secondAttribute="trailing" constant="-20" id="uaE-oW-X6A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Выбрать дату" id="img-M1-vc8">
+                        <barButtonItem key="leftBarButtonItem" title="Отменить" id="VLm-Vx-VZl">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="Cxm-9h-o3d" id="LBD-cL-fRA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="SeX-Uq-91h">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="Cxm-9h-o3d" id="uHA-Zz-Aiz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="CiW-vr-KVx" id="ZD2-Y6-NHB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="thV-ZN-cX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3107" y="585"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2LO-RA-SwE">
@@ -158,6 +214,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aau-9s-gie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="786" y="132"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JJb-WG-gq3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Y5-ie-laU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="007-HE-rRB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cxm-9h-o3d" kind="relationship" relationship="rootViewController" id="AoN-Nu-6We"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8S-jd-KMP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2352" y="585"/>
         </scene>
     </scenes>
     <resources>

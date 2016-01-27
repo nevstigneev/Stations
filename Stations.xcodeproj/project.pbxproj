@@ -20,6 +20,7 @@
 		6081905A1C57813B009F7931 /* TTRStationFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 608190591C57813B009F7931 /* TTRStationFetcher.m */; };
 		6081905D1C578D09009F7931 /* TTRStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081905C1C578D09009F7931 /* TTRStation.m */; };
 		608190601C57934C009F7931 /* TTRCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081905F1C57934C009F7931 /* TTRCity.m */; };
+		608190711C58DCB3009F7931 /* TTRDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 608190701C58DCB3009F7931 /* TTRDateViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		6081905F1C57934C009F7931 /* TTRCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRCity.m; sourceTree = "<group>"; };
 		608190611C579675009F7931 /* TTRPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRPoint.h; sourceTree = "<group>"; };
 		6081906B1C58CE64009F7931 /* TTRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRConstants.h; sourceTree = "<group>"; };
+		6081906F1C58DCB3009F7931 /* TTRDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRDateViewController.h; sourceTree = "<group>"; };
+		608190701C58DCB3009F7931 /* TTRDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRDateViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,7 @@
 			children = (
 				6081904A1C56A551009F7931 /* SchedulePage */,
 				608190521C56DE52009F7931 /* StationsPage */,
+				6081906E1C58DC8B009F7931 /* DatePage */,
 			);
 			name = Pages;
 			sourceTree = "<group>";
@@ -221,6 +225,15 @@
 				6081906B1C58CE64009F7931 /* TTRConstants.h */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		6081906E1C58DC8B009F7931 /* DatePage */ = {
+			isa = PBXGroup;
+			children = (
+				6081906F1C58DCB3009F7931 /* TTRDateViewController.h */,
+				608190701C58DCB3009F7931 /* TTRDateViewController.m */,
+			);
+			name = DatePage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +346,7 @@
 				6081905D1C578D09009F7931 /* TTRStation.m in Sources */,
 				6081901D1C563386009F7931 /* main.m in Sources */,
 				608190601C57934C009F7931 /* TTRCity.m in Sources */,
+				608190711C58DCB3009F7931 /* TTRDateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
