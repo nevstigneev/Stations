@@ -36,6 +36,10 @@ typedef NS_ENUM(NSInteger, TTRSegmentIndex) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dateControl.selectedSegmentIndex = TTRSegmentIndexNone;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                          action:@selector(dismissKeyboard)];
+    tap.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tap];
 }
 
 #pragma mark - Actions
@@ -43,6 +47,14 @@ typedef NS_ENUM(NSInteger, TTRSegmentIndex) {
 - (IBAction)segmentChanged:(UISegmentedControl *)sender {
     if (sender.selectedSegmentIndex == TTRSegmentIndexSelect) {
         [self performSegueWithIdentifier:@"TTRDateSegue" sender:sender];
+    }
+}
+
+- (void)dismissKeyboard {
+    if ([self.departureField isFirstResponder]) {
+        [self.departureField resignFirstResponder];
+    } else if ([self.destinationField isFirstResponder]) {
+        [self.destinationField resignFirstResponder];
     }
 }
 

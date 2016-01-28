@@ -9,7 +9,6 @@
         <!--О приложении-->
         <scene sceneID="sXJ-lZ-26e">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sdd-Ga-rvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="AkI-3e-A4K" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5pJ-fi-DmS"/>
@@ -42,6 +41,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="О приложении" image="info" id="1MB-1u-PCu"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sdd-Ga-rvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="786" y="792"/>
         </scene>
