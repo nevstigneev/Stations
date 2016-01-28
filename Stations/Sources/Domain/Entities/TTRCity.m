@@ -14,7 +14,7 @@
 - (instancetype)init {
     @throw [NSException
             exceptionWithName:NSInternalInconsistencyException
-            reason:[NSString stringWithFormat:@"Unexpected deadly init invokation '%@', use %@ instead.",
+            reason:[NSString stringWithFormat:@"Unexpected deadly init invocation '%@', use %@ instead.",
                     NSStringFromSelector(_cmd),
                     NSStringFromSelector(@selector(initWithCountryTitle:cityId:cityTitle:stations:))]
             userInfo:nil];
@@ -30,6 +30,23 @@
         _stations = stations;
     }
     return self;
+}
+
+- (BOOL)isEqual:(id)object {
+    if ([self class] != [object class]) {
+        return NO;
+    }
+    TTRCity *otherCity = (TTRCity *)object;
+    if (self.cityId != otherCity.cityId) {
+        return NO;
+    }
+    if (![self.countryTitle isEqualToString:otherCity.countryTitle]) {
+        return NO;
+    }
+    if (![self.cityTitle isEqualToString:otherCity.cityTitle]) {
+        return NO;
+    }
+    return YES;
 }
 
 @end

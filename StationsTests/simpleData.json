@@ -1,0 +1,109 @@
+{
+  "citiesFrom" : [
+    {
+      "countryTitle" : "Австрия",
+      "point" : {
+        "longitude" : 16.36879539489746,
+        "latitude" : 48.20253753662109
+      },
+      "districtTitle" : "",
+      "cityId" : 2352,
+      "cityTitle" : "Вена",
+      "regionTitle" : "",
+      "stations" : [
+        {
+          "countryTitle" : "Австрия",
+          "point" : {
+            "longitude" : 16.36879539489746,
+            "latitude" : 48.20253753662109
+          },
+          "districtTitle" : "",
+          "cityId" : 2352,
+          "cityTitle" : "город Вена",
+          "regionTitle" : "",
+          "stationId" : 10154,
+          "stationTitle" : "International Busterminal, Edbergstarsse 200 A"
+        },
+        {
+          "countryTitle" : "Австрия",
+          "point" : {
+            "longitude" : 16.36879539489746,
+            "latitude" : 48.20253753662109
+          },
+          "districtTitle" : "",
+          "cityId" : 2352,
+          "cityTitle" : "город Вена",
+          "regionTitle" : "",
+          "stationId" : 9864,
+          "stationTitle" : "Stadion Center, Engerthstr. 242"
+        }
+      ]
+    }
+ ], "citiesTo" : [
+    {
+      "countryTitle" : "Австрия",
+      "point" : {
+        "longitude" : 16.36879539489746,
+        "latitude" : 48.20253753662109
+      },
+      "districtTitle" : "",
+      "cityId" : 2352,
+      "cityTitle" : "Вена",
+      "regionTitle" : "",
+      "stations" : [
+        {
+          "countryTitle" : "Австрия",
+          "point" : {
+            "longitude" : 16.36879539489746,
+            "latitude" : 48.20253753662109
+          },
+          "districtTitle" : "",
+          "cityId" : 2352,
+          "cityTitle" : "город Вена",
+          "regionTitle" : "",
+          "stationId" : 10154,
+          "stationTitle" : "International Busterminal, Edbergstarsse 200 A"
+        },
+        {
+          "countryTitle" : "Австрия",
+          "point" : {
+            "longitude" : 16.36879539489746,
+            "latitude" : 48.20253753662109
+          },
+          "districtTitle" : "",
+          "cityId" : 2352,
+          "cityTitle" : "город Вена",
+          "regionTitle" : "",
+          "stationId" : 9864,
+          "stationTitle" : "Stadion Center, Engerthstr. 242"
+        }
+      ] 
+    },
+    {
+      "countryTitle" : "Австрия",
+      "point" : {
+        "longitude" : 13.04336738586426,
+        "latitude" : 47.80066680908203
+      },
+      "districtTitle" : "",
+      "cityId" : 13080,
+      "cityTitle" : "Зальцбург",
+      "regionTitle" : "",
+      "stations" : [
+        {
+          "countryTitle" : "Австрия",
+          "point" : {
+            "longitude" : 13.04336738586426,
+            "latitude" : 47.80066680908203
+          },
+          "districtTitle" : "",
+          "cityId" : 13080,
+          "cityTitle" : "город Зальцбург",
+          "regionTitle" : "",
+          "stationId" : 10234,
+          "stationTitle" : "P+R Süd"
+        }
+      ]
+    }
+  ]
+}

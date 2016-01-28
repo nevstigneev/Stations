@@ -13,7 +13,7 @@
 - (instancetype)init {
     @throw [NSException
             exceptionWithName:NSInternalInconsistencyException
-            reason:[NSString stringWithFormat:@"Unexpected deadly init invokation '%@', use %@ instead.",
+            reason:[NSString stringWithFormat:@"Unexpected deadly init invocation '%@', use %@ instead.",
                     NSStringFromSelector(_cmd),
                     NSStringFromSelector(@selector(initWithCountryTitle:point:districtTitle:cityId:cityTitle:regionTitle:stationId:stationTitle:))]
             userInfo:nil];
@@ -34,6 +34,38 @@
         _stationTitle = [stationTitle copy];
     }
     return self;
+}
+
+- (BOOL)isEqual:(id)object {
+    if ([self class] != [object class]) {
+        return NO;
+    }
+    TTRStation *otherStation = (TTRStation *)object;
+    if (self.stationId != otherStation.stationId) {
+        return NO;
+    }
+    if (self.point.longitude != otherStation.point.longitude || self.point.latitude != otherStation.point.latitude) {
+        return NO;
+    }
+    if (![self.districtTitle isEqualToString:otherStation.districtTitle]) {
+        return NO;
+    }
+    if (![self.cityTitle isEqualToString:otherStation.cityTitle]) {
+        return NO;
+    }
+    if (self.cityId != otherStation.cityId) {
+        return NO;
+    }
+    if (![self.regionTitle isEqualToString:otherStation.regionTitle]) {
+        return NO;
+    }
+    if (![self.stationTitle isEqualToString:otherStation.stationTitle]) {
+        return NO;
+    }
+    if (self.stationId != otherStation.stationId) {
+        return  NO;
+    }
+    return YES;
 }
 
 @end

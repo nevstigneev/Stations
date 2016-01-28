@@ -21,7 +21,13 @@
 		606794831C59FFE700872C02 /* TTRStationFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 606794821C59FFE700872C02 /* TTRStationFetcher.m */; };
 		606794871C59FFF600872C02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 606794841C59FFF600872C02 /* main.m */; };
 		606794881C59FFF600872C02 /* TTRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 606794861C59FFF600872C02 /* TTRAppDelegate.m */; };
-		608190361C563386009F7931 /* StationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 608190351C563386009F7931 /* StationsTests.m */; };
+		6067948A1C5A0E5000872C02 /* TTRCityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 606794891C5A0E5000872C02 /* TTRCityTests.m */; };
+		6067948F1C5A0E9800872C02 /* TTRStationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6067948E1C5A0E9800872C02 /* TTRStationTests.m */; };
+		606794911C5A0EE500872C02 /* TTRStationFetcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 606794901C5A0EE500872C02 /* TTRStationFetcherTests.m */; };
+		606794931C5A137900872C02 /* badData.json in Resources */ = {isa = PBXBuildFile; fileRef = 606794921C5A137900872C02 /* badData.json */; };
+		606794951C5A187000872C02 /* simpleData.json in Resources */ = {isa = PBXBuildFile; fileRef = 606794941C5A187000872C02 /* simpleData.json */; };
+		606794961C5A1CA300872C02 /* badData.json in Resources */ = {isa = PBXBuildFile; fileRef = 606794921C5A137900872C02 /* badData.json */; };
+		606794971C5A1CA300872C02 /* simpleData.json in Resources */ = {isa = PBXBuildFile; fileRef = 606794941C5A187000872C02 /* simpleData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,9 +67,13 @@
 		606794841C59FFF600872C02 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Sources/main.m; sourceTree = "<group>"; };
 		606794851C59FFF600872C02 /* TTRAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTRAppDelegate.h; path = Sources/TTRAppDelegate.h; sourceTree = "<group>"; };
 		606794861C59FFF600872C02 /* TTRAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTRAppDelegate.m; path = Sources/TTRAppDelegate.m; sourceTree = "<group>"; };
+		606794891C5A0E5000872C02 /* TTRCityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTRCityTests.m; path = Domain/Entities/TTRCityTests.m; sourceTree = "<group>"; };
+		6067948E1C5A0E9800872C02 /* TTRStationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTRStationTests.m; path = Domain/Entities/TTRStationTests.m; sourceTree = "<group>"; };
+		606794901C5A0EE500872C02 /* TTRStationFetcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTRStationFetcherTests.m; path = Domain/Services/TTRStationFetcherTests.m; sourceTree = "<group>"; };
+		606794921C5A137900872C02 /* badData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = badData.json; sourceTree = "<group>"; };
+		606794941C5A187000872C02 /* simpleData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = simpleData.json; sourceTree = "<group>"; };
 		608190181C563386009F7931 /* Stations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		608190311C563386009F7931 /* StationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		608190351C563386009F7931 /* StationsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationsTests.m; sourceTree = "<group>"; };
 		608190371C563386009F7931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +95,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6067948B1C5A0E5500872C02 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				6067948C1C5A0E5D00872C02 /* Entities */,
+				6067948D1C5A0E6200872C02 /* Services */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		6067948C1C5A0E5D00872C02 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				606794891C5A0E5000872C02 /* TTRCityTests.m */,
+				6067948E1C5A0E9800872C02 /* TTRStationTests.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		6067948D1C5A0E6200872C02 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				606794901C5A0EE500872C02 /* TTRStationFetcherTests.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		6081900F1C563386009F7931 = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +152,10 @@
 		608190341C563386009F7931 /* StationsTests */ = {
 			isa = PBXGroup;
 			children = (
-				608190351C563386009F7931 /* StationsTests.m */,
+				6067948B1C5A0E5500872C02 /* Domain */,
 				608190371C563386009F7931 /* Info.plist */,
+				606794921C5A137900872C02 /* badData.json */,
+				606794941C5A187000872C02 /* simpleData.json */,
 			);
 			path = StationsTests;
 			sourceTree = "<group>";
@@ -330,6 +368,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				606794961C5A1CA300872C02 /* badData.json in Resources */,
+				606794971C5A1CA300872C02 /* simpleData.json in Resources */,
 				606794611C59FF2C00872C02 /* allStations.json in Resources */,
 				606794621C59FF2C00872C02 /* Assets.xcassets in Resources */,
 				606794691C59FF4E00872C02 /* LaunchScreen.storyboard in Resources */,
@@ -341,6 +381,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				606794931C5A137900872C02 /* badData.json in Resources */,
+				606794951C5A187000872C02 /* simpleData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +410,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				608190361C563386009F7931 /* StationsTests.m in Sources */,
+				6067948F1C5A0E9800872C02 /* TTRStationTests.m in Sources */,
+				6067948A1C5A0E5000872C02 /* TTRCityTests.m in Sources */,
+				606794911C5A0EE500872C02 /* TTRStationFetcherTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

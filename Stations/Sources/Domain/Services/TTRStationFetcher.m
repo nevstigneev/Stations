@@ -28,7 +28,7 @@ typedef NS_ENUM (NSInteger, TTRStationsError) {
 - (instancetype)init {
     @throw [NSException
             exceptionWithName:NSInternalInconsistencyException
-            reason:[NSString stringWithFormat:@"Unexpected deadly init invokation '%@', use %@ instead.",
+            reason:[NSString stringWithFormat:@"Unexpected deadly init invocation '%@', use %@ instead.",
                     NSStringFromSelector(_cmd),
                     NSStringFromSelector(@selector(initWithCitiesType:))]
             userInfo:nil];
@@ -80,8 +80,10 @@ typedef NS_ENUM (NSInteger, TTRStationsError) {
         return result;
     }
     @catch (NSException *exception) {
-        *error = [NSError errorWithDomain:TTRStationsErrorDomain code:TTRStationsErrorJsonParsing
-                                 userInfo:@{NSLocalizedDescriptionKey: [exception reason]}];
+        if (error) {
+            *error = [NSError errorWithDomain:TTRStationsErrorDomain code:TTRStationsErrorJsonParsing
+                                     userInfo:@{NSLocalizedDescriptionKey : [exception reason]}];
+        }
         return nil;
     }
 }
