@@ -19,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Версия 1.0 от 28 января 2016 г. " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Sd-Zv-ZJ1">
-                                <rect key="frame" x="166" y="238" width="268" height="22"/>
+                                <rect key="frame" x="166" y="244" width="268" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2016 Nikolay Evstigneev" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjM-H7-pLw">
-                                <rect key="frame" x="198" y="268" width="205" height="21"/>
+                                <rect key="frame" x="198" y="274" width="205" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -34,16 +34,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0Sd-Zv-ZJ1" firstAttribute="centerX" secondItem="SvB-Og-obF" secondAttribute="centerX" id="2ax-bA-yFg"/>
+                            <constraint firstItem="0Sd-Zv-ZJ1" firstAttribute="top" secondItem="5pJ-fi-DmS" secondAttribute="bottom" constant="180" id="4o8-W1-PLU"/>
                             <constraint firstItem="mjM-H7-pLw" firstAttribute="centerX" secondItem="SvB-Og-obF" secondAttribute="centerX" id="BKw-xJ-IdW"/>
                             <constraint firstItem="mjM-H7-pLw" firstAttribute="top" secondItem="0Sd-Zv-ZJ1" secondAttribute="bottom" constant="8" id="czL-Ex-uQE"/>
-                            <constraint firstItem="0Sd-Zv-ZJ1" firstAttribute="top" secondItem="5pJ-fi-DmS" secondAttribute="bottom" constant="218" id="vfv-Pu-HDj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="О приложении" image="info" id="1MB-1u-PCu"/>
+                    <navigationItem key="navigationItem" title="О приложении" id="7JX-J7-D1p"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sdd-Ga-rvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="786" y="792"/>
+            <point key="canvasLocation" x="1598" y="792"/>
         </scene>
         <!--Расписание-->
         <scene sceneID="wdR-Vc-yfN">
@@ -331,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thV-ZN-cX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3107" y="585"/>
+            <point key="canvasLocation" x="3919" y="585"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2LO-RA-SwE">
@@ -344,7 +344,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="rms-7K-d64" kind="relationship" relationship="viewControllers" id="Il6-bl-aBn"/>
-                        <segue destination="AkI-3e-A4K" kind="relationship" relationship="viewControllers" id="Eih-yI-Fut"/>
+                        <segue destination="TmN-fE-qmM" kind="relationship" relationship="viewControllers" id="Eih-yI-Fut"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ye-gN-cFx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -386,7 +386,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8S-jd-KMP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2352" y="585"/>
+            <point key="canvasLocation" x="3164" y="585"/>
+        </scene>
+        <!--О приложении-->
+        <scene sceneID="prA-0D-Tft">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TmN-fE-qmM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="О приложении" image="info" id="1MB-1u-PCu"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gfU-XD-0e3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AkI-3e-A4K" kind="relationship" relationship="rootViewController" id="Ci1-dS-UeX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PLC-Ne-tMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="786" y="792"/>
         </scene>
     </scenes>
     <resources>
