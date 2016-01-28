@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6081901D1C563386009F7931 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081901C1C563386009F7931 /* main.m */; };
-		608190201C563386009F7931 /* TTRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081901F1C563386009F7931 /* TTRAppDelegate.m */; };
-		608190261C563386009F7931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608190241C563386009F7931 /* Main.storyboard */; };
-		608190281C563386009F7931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 608190271C563386009F7931 /* Assets.xcassets */; };
-		6081902B1C563386009F7931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608190291C563386009F7931 /* LaunchScreen.storyboard */; };
+		606794611C59FF2C00872C02 /* allStations.json in Resources */ = {isa = PBXBuildFile; fileRef = 6067945E1C59FF2C00872C02 /* allStations.json */; };
+		606794621C59FF2C00872C02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6067945F1C59FF2C00872C02 /* Assets.xcassets */; };
+		606794681C59FF4E00872C02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 606794641C59FF4E00872C02 /* Main.storyboard */; };
+		606794691C59FF4E00872C02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 606794661C59FF4E00872C02 /* LaunchScreen.storyboard */; };
+		6067946E1C59FF7A00872C02 /* TTRScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6067946B1C59FF7A00872C02 /* TTRScheduleViewController.m */; };
+		6067946F1C59FF7A00872C02 /* TTRTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6067946D1C59FF7A00872C02 /* TTRTextField.m */; };
+		606794721C59FF9000872C02 /* TTRStationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606794711C59FF9000872C02 /* TTRStationsTableViewController.m */; };
+		606794751C59FFA100872C02 /* TTRDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606794741C59FFA100872C02 /* TTRDateViewController.m */; };
+		606794781C59FFB600872C02 /* TTRStationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606794771C59FFB600872C02 /* TTRStationDetailViewController.m */; };
+		6067947F1C59FFD800872C02 /* TTRCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6067947B1C59FFD800872C02 /* TTRCity.m */; };
+		606794801C59FFD800872C02 /* TTRStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6067947E1C59FFD800872C02 /* TTRStation.m */; };
+		606794831C59FFE700872C02 /* TTRStationFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 606794821C59FFE700872C02 /* TTRStationFetcher.m */; };
+		606794871C59FFF600872C02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 606794841C59FFF600872C02 /* main.m */; };
+		606794881C59FFF600872C02 /* TTRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 606794861C59FFF600872C02 /* TTRAppDelegate.m */; };
 		608190361C563386009F7931 /* StationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 608190351C563386009F7931 /* StationsTests.m */; };
-		608190421C56416F009F7931 /* TTRTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 608190411C56416F009F7931 /* TTRTextField.m */; };
-		6081904D1C56A5CD009F7931 /* TTRScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081904C1C56A5CD009F7931 /* TTRScheduleViewController.m */; };
-		608190511C56DE4A009F7931 /* TTRStationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 608190501C56DE4A009F7931 /* TTRStationsTableViewController.m */; };
-		608190561C56E9E8009F7931 /* allStations.json in Resources */ = {isa = PBXBuildFile; fileRef = 608190551C56E9E8009F7931 /* allStations.json */; };
-		6081905A1C57813B009F7931 /* TTRStationFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 608190591C57813B009F7931 /* TTRStationFetcher.m */; };
-		6081905D1C578D09009F7931 /* TTRStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081905C1C578D09009F7931 /* TTRStation.m */; };
-		608190601C57934C009F7931 /* TTRCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081905F1C57934C009F7931 /* TTRCity.m */; };
-		608190711C58DCB3009F7931 /* TTRDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 608190701C58DCB3009F7931 /* TTRDateViewController.m */; };
-		608190751C592778009F7931 /* TTRStationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 608190741C592778009F7931 /* TTRStationDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,36 +35,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6067945C1C59FF1700872C02 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = InfoPlists/Info.plist; sourceTree = "<group>"; };
+		6067945E1C59FF2C00872C02 /* allStations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = allStations.json; path = Resources/allStations.json; sourceTree = "<group>"; };
+		6067945F1C59FF2C00872C02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
+		606794651C59FF4E00872C02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Resources/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		606794671C59FF4E00872C02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Resources/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6067946A1C59FF7A00872C02 /* TTRScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTRScheduleViewController.h; path = Sources/Application/Pages/SchedulePage/TTRScheduleViewController.h; sourceTree = "<group>"; };
+		6067946B1C59FF7A00872C02 /* TTRScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTRScheduleViewController.m; path = Sources/Application/Pages/SchedulePage/TTRScheduleViewController.m; sourceTree = "<group>"; };
+		6067946C1C59FF7A00872C02 /* TTRTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTRTextField.h; path = Sources/Application/Pages/SchedulePage/TTRTextField.h; sourceTree = "<group>"; };
+		6067946D1C59FF7A00872C02 /* TTRTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTRTextField.m; path = Sources/Application/Pages/SchedulePage/TTRTextField.m; sourceTree = "<group>"; };
+		606794701C59FF9000872C02 /* TTRStationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTRStationsTableViewController.h; path = Sources/Application/Pages/StationsPage/TTRStationsTableViewController.h; sourceTree = "<group>"; };
+		606794711C59FF9000872C02 /* TTRStationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTRStationsTableViewController.m; path = Sources/Application/Pages/StationsPage/TTRStationsTableViewController.m; sourceTree = "<group>"; };
+		606794731C59FFA100872C02 /* TTRDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTRDateViewController.h; path = Sources/Application/Pages/DatePage/TTRDateViewController.h; sourceTree = "<group>"; };
+		606794741C59FFA100872C02 /* TTRDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTRDateViewController.m; path = Sources/Application/Pages/DatePage/TTRDateViewController.m; sourceTree = "<group>"; };
+		606794761C59FFB600872C02 /* TTRStationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTRStationDetailViewController.h; path = Sources/Application/Pages/StationDetailPage/TTRStationDetailViewController.h; sourceTree = "<group>"; };
+		606794771C59FFB600872C02 /* TTRStationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTRStationDetailViewController.m; path = Sources/Application/Pages/StationDetailPage/TTRStationDetailViewController.m; sourceTree = "<group>"; };
+		606794791C59FFC400872C02 /* TTRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTRConstants.h; path = Sources/Utilities/TTRConstants.h; sourceTree = "<group>"; };
+		6067947A1C59FFD800872C02 /* TTRCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTRCity.h; path = Sources/Domain/Entities/TTRCity.h; sourceTree = "<group>"; };
+		6067947B1C59FFD800872C02 /* TTRCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTRCity.m; path = Sources/Domain/Entities/TTRCity.m; sourceTree = "<group>"; };
+		6067947C1C59FFD800872C02 /* TTRPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTRPoint.h; path = Sources/Domain/Entities/TTRPoint.h; sourceTree = "<group>"; };
+		6067947D1C59FFD800872C02 /* TTRStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTRStation.h; path = Sources/Domain/Entities/TTRStation.h; sourceTree = "<group>"; };
+		6067947E1C59FFD800872C02 /* TTRStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTRStation.m; path = Sources/Domain/Entities/TTRStation.m; sourceTree = "<group>"; };
+		606794811C59FFE700872C02 /* TTRStationFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTRStationFetcher.h; path = Sources/Domain/Services/TTRStationFetcher.h; sourceTree = "<group>"; };
+		606794821C59FFE700872C02 /* TTRStationFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTRStationFetcher.m; path = Sources/Domain/Services/TTRStationFetcher.m; sourceTree = "<group>"; };
+		606794841C59FFF600872C02 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Sources/main.m; sourceTree = "<group>"; };
+		606794851C59FFF600872C02 /* TTRAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTRAppDelegate.h; path = Sources/TTRAppDelegate.h; sourceTree = "<group>"; };
+		606794861C59FFF600872C02 /* TTRAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTRAppDelegate.m; path = Sources/TTRAppDelegate.m; sourceTree = "<group>"; };
 		608190181C563386009F7931 /* Stations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stations.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6081901C1C563386009F7931 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6081901E1C563386009F7931 /* TTRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTRAppDelegate.h; sourceTree = "<group>"; };
-		6081901F1C563386009F7931 /* TTRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTRAppDelegate.m; sourceTree = "<group>"; };
-		608190251C563386009F7931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		608190271C563386009F7931 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6081902A1C563386009F7931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6081902C1C563386009F7931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		608190311C563386009F7931 /* StationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		608190351C563386009F7931 /* StationsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationsTests.m; sourceTree = "<group>"; };
 		608190371C563386009F7931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		608190401C56416F009F7931 /* TTRTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRTextField.h; sourceTree = "<group>"; };
-		608190411C56416F009F7931 /* TTRTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRTextField.m; sourceTree = "<group>"; };
-		6081904B1C56A5CD009F7931 /* TTRScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRScheduleViewController.h; sourceTree = "<group>"; };
-		6081904C1C56A5CD009F7931 /* TTRScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRScheduleViewController.m; sourceTree = "<group>"; };
-		6081904F1C56DE4A009F7931 /* TTRStationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRStationsTableViewController.h; sourceTree = "<group>"; };
-		608190501C56DE4A009F7931 /* TTRStationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRStationsTableViewController.m; sourceTree = "<group>"; };
-		608190551C56E9E8009F7931 /* allStations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = allStations.json; sourceTree = "<group>"; };
-		608190581C57813B009F7931 /* TTRStationFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRStationFetcher.h; sourceTree = "<group>"; };
-		608190591C57813B009F7931 /* TTRStationFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRStationFetcher.m; sourceTree = "<group>"; };
-		6081905B1C578D09009F7931 /* TTRStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRStation.h; sourceTree = "<group>"; };
-		6081905C1C578D09009F7931 /* TTRStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRStation.m; sourceTree = "<group>"; };
-		6081905E1C57934C009F7931 /* TTRCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRCity.h; sourceTree = "<group>"; };
-		6081905F1C57934C009F7931 /* TTRCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRCity.m; sourceTree = "<group>"; };
-		608190611C579675009F7931 /* TTRPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRPoint.h; sourceTree = "<group>"; };
-		6081906B1C58CE64009F7931 /* TTRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRConstants.h; sourceTree = "<group>"; };
-		6081906F1C58DCB3009F7931 /* TTRDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRDateViewController.h; sourceTree = "<group>"; };
-		608190701C58DCB3009F7931 /* TTRDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRDateViewController.m; sourceTree = "<group>"; };
-		608190731C592778009F7931 /* TTRStationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRStationDetailViewController.h; sourceTree = "<group>"; };
-		608190741C592778009F7931 /* TTRStationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRStationDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +109,6 @@
 				608190431C56A390009F7931 /* InfoPlists */,
 				608190441C56A398009F7931 /* Resources */,
 				608190451C56A49D009F7931 /* Sources */,
-				6081901E1C563386009F7931 /* TTRAppDelegate.h */,
-				6081901F1C563386009F7931 /* TTRAppDelegate.m */,
-				6081901C1C563386009F7931 /* main.m */,
 			);
 			path = Stations;
 			sourceTree = "<group>";
@@ -128,7 +125,7 @@
 		608190431C56A390009F7931 /* InfoPlists */ = {
 			isa = PBXGroup;
 			children = (
-				6081902C1C563386009F7931 /* Info.plist */,
+				6067945C1C59FF1700872C02 /* Info.plist */,
 			);
 			name = InfoPlists;
 			sourceTree = "<group>";
@@ -136,10 +133,10 @@
 		608190441C56A398009F7931 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				608190551C56E9E8009F7931 /* allStations.json */,
-				608190271C563386009F7931 /* Assets.xcassets */,
-				608190291C563386009F7931 /* LaunchScreen.storyboard */,
-				608190241C563386009F7931 /* Main.storyboard */,
+				6067945E1C59FF2C00872C02 /* allStations.json */,
+				6067945F1C59FF2C00872C02 /* Assets.xcassets */,
+				606794661C59FF4E00872C02 /* LaunchScreen.storyboard */,
+				606794641C59FF4E00872C02 /* Main.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -149,6 +146,9 @@
 			children = (
 				608190461C56A4C3009F7931 /* Application */,
 				608190481C56A4E8009F7931 /* Domain */,
+				606794851C59FFF600872C02 /* TTRAppDelegate.h */,
+				606794861C59FFF600872C02 /* TTRAppDelegate.m */,
+				606794841C59FFF600872C02 /* main.m */,
 				608190691C58CE19009F7931 /* Utilities */,
 			);
 			name = Sources;
@@ -185,11 +185,11 @@
 		608190491C56A4F7009F7931 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				6081905E1C57934C009F7931 /* TTRCity.h */,
-				6081905F1C57934C009F7931 /* TTRCity.m */,
-				6081905B1C578D09009F7931 /* TTRStation.h */,
-				6081905C1C578D09009F7931 /* TTRStation.m */,
-				608190611C579675009F7931 /* TTRPoint.h */,
+				6067947A1C59FFD800872C02 /* TTRCity.h */,
+				6067947B1C59FFD800872C02 /* TTRCity.m */,
+				6067947C1C59FFD800872C02 /* TTRPoint.h */,
+				6067947D1C59FFD800872C02 /* TTRStation.h */,
+				6067947E1C59FFD800872C02 /* TTRStation.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -197,10 +197,10 @@
 		6081904A1C56A551009F7931 /* SchedulePage */ = {
 			isa = PBXGroup;
 			children = (
-				608190401C56416F009F7931 /* TTRTextField.h */,
-				608190411C56416F009F7931 /* TTRTextField.m */,
-				6081904B1C56A5CD009F7931 /* TTRScheduleViewController.h */,
-				6081904C1C56A5CD009F7931 /* TTRScheduleViewController.m */,
+				6067946C1C59FF7A00872C02 /* TTRTextField.h */,
+				6067946D1C59FF7A00872C02 /* TTRTextField.m */,
+				6067946A1C59FF7A00872C02 /* TTRScheduleViewController.h */,
+				6067946B1C59FF7A00872C02 /* TTRScheduleViewController.m */,
 			);
 			name = SchedulePage;
 			sourceTree = "<group>";
@@ -208,8 +208,8 @@
 		608190521C56DE52009F7931 /* StationsPage */ = {
 			isa = PBXGroup;
 			children = (
-				6081904F1C56DE4A009F7931 /* TTRStationsTableViewController.h */,
-				608190501C56DE4A009F7931 /* TTRStationsTableViewController.m */,
+				606794701C59FF9000872C02 /* TTRStationsTableViewController.h */,
+				606794711C59FF9000872C02 /* TTRStationsTableViewController.m */,
 			);
 			name = StationsPage;
 			sourceTree = "<group>";
@@ -217,8 +217,8 @@
 		608190571C5780FB009F7931 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				608190581C57813B009F7931 /* TTRStationFetcher.h */,
-				608190591C57813B009F7931 /* TTRStationFetcher.m */,
+				606794811C59FFE700872C02 /* TTRStationFetcher.h */,
+				606794821C59FFE700872C02 /* TTRStationFetcher.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -226,7 +226,7 @@
 		608190691C58CE19009F7931 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				6081906B1C58CE64009F7931 /* TTRConstants.h */,
+				606794791C59FFC400872C02 /* TTRConstants.h */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -234,8 +234,8 @@
 		6081906E1C58DC8B009F7931 /* DatePage */ = {
 			isa = PBXGroup;
 			children = (
-				6081906F1C58DCB3009F7931 /* TTRDateViewController.h */,
-				608190701C58DCB3009F7931 /* TTRDateViewController.m */,
+				606794731C59FFA100872C02 /* TTRDateViewController.h */,
+				606794741C59FFA100872C02 /* TTRDateViewController.m */,
 			);
 			name = DatePage;
 			sourceTree = "<group>";
@@ -243,8 +243,8 @@
 		608190721C59274B009F7931 /* StationDetailPage */ = {
 			isa = PBXGroup;
 			children = (
-				608190731C592778009F7931 /* TTRStationDetailViewController.h */,
-				608190741C592778009F7931 /* TTRStationDetailViewController.m */,
+				606794761C59FFB600872C02 /* TTRStationDetailViewController.h */,
+				606794771C59FFB600872C02 /* TTRStationDetailViewController.m */,
 			);
 			name = StationDetailPage;
 			sourceTree = "<group>";
@@ -330,10 +330,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6081902B1C563386009F7931 /* LaunchScreen.storyboard in Resources */,
-				608190281C563386009F7931 /* Assets.xcassets in Resources */,
-				608190561C56E9E8009F7931 /* allStations.json in Resources */,
-				608190261C563386009F7931 /* Main.storyboard in Resources */,
+				606794611C59FF2C00872C02 /* allStations.json in Resources */,
+				606794621C59FF2C00872C02 /* Assets.xcassets in Resources */,
+				606794691C59FF4E00872C02 /* LaunchScreen.storyboard in Resources */,
+				606794681C59FF4E00872C02 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,16 +351,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6081904D1C56A5CD009F7931 /* TTRScheduleViewController.m in Sources */,
-				608190511C56DE4A009F7931 /* TTRStationsTableViewController.m in Sources */,
-				608190751C592778009F7931 /* TTRStationDetailViewController.m in Sources */,
-				608190421C56416F009F7931 /* TTRTextField.m in Sources */,
-				6081905A1C57813B009F7931 /* TTRStationFetcher.m in Sources */,
-				608190201C563386009F7931 /* TTRAppDelegate.m in Sources */,
-				6081905D1C578D09009F7931 /* TTRStation.m in Sources */,
-				6081901D1C563386009F7931 /* main.m in Sources */,
-				608190601C57934C009F7931 /* TTRCity.m in Sources */,
-				608190711C58DCB3009F7931 /* TTRDateViewController.m in Sources */,
+				6067946F1C59FF7A00872C02 /* TTRTextField.m in Sources */,
+				6067946E1C59FF7A00872C02 /* TTRScheduleViewController.m in Sources */,
+				606794781C59FFB600872C02 /* TTRStationDetailViewController.m in Sources */,
+				606794831C59FFE700872C02 /* TTRStationFetcher.m in Sources */,
+				6067947F1C59FFD800872C02 /* TTRCity.m in Sources */,
+				606794881C59FFF600872C02 /* TTRAppDelegate.m in Sources */,
+				606794721C59FF9000872C02 /* TTRStationsTableViewController.m in Sources */,
+				606794751C59FFA100872C02 /* TTRDateViewController.m in Sources */,
+				606794871C59FFF600872C02 /* main.m in Sources */,
+				606794801C59FFD800872C02 /* TTRStation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,18 +383,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		608190241C563386009F7931 /* Main.storyboard */ = {
+		606794641C59FF4E00872C02 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				608190251C563386009F7931 /* Base */,
+				606794651C59FF4E00872C02 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		608190291C563386009F7931 /* LaunchScreen.storyboard */ = {
+		606794661C59FF4E00872C02 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6081902A1C563386009F7931 /* Base */,
+				606794671C59FF4E00872C02 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -488,7 +488,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Stations/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Stations/InfoPlists/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.topside.Stations;
@@ -500,7 +500,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Stations/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Stations/InfoPlists/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.topside.Stations;
