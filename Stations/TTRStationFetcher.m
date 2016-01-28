@@ -48,19 +48,15 @@ typedef NS_ENUM (NSInteger, TTRStationsError) {
 
 - (void)fetchStationsFromFileWithCompletion:(void (^)(NSArray<TTRCity *> *data, NSError *error))completionHandler {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSError *error = nil;
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"allStations" ofType:@"json"];
         NSData *dataFromFile = [NSData dataWithContentsOfFile:filePath];
         NSArray<TTRCity *> *cities = nil;
+        NSError *error = nil;
         if (dataFromFile) {
             cities = [self parseCities:dataFromFile error:&error];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
-            if (!error) {
-                completionHandler(cities, nil);
-            } else {
-                completionHandler(nil, error);
-            }
+            completionHandler(cities, error);
         });
     });
 }
@@ -77,7 +73,7 @@ typedef NS_ENUM (NSInteger, TTRStationsError) {
             NSInteger cityId = [city[@"cityId"] integerValue];
             NSString *cityTitle = city[@"cityTitle"];
             NSArray *stations = city[@"stations"];
-            NSArray<TTRStation *> *resultStations = [self parseStations:stations error:error];
+            NSArray<TTRStation *> *resultStations = [self parseStations:stations];
             TTRCity *city = [[TTRCity alloc] initWithCountryTitle:countryTitle cityId:cityId cityTitle:cityTitle stations:resultStations];
             [result addObject:city];
         }
@@ -90,7 +86,7 @@ typedef NS_ENUM (NSInteger, TTRStationsError) {
     }
 }
 
-- (NSArray<TTRStation *> *)parseStations:(NSArray *)data error:(NSError **)error {
+- (NSArray<TTRStation *> *)parseStations:(NSArray *)data {
     NSMutableArray<TTRStation *> *result = [[NSMutableArray alloc] init];
     for (NSDictionary *station in data) {
         NSString *countryTitle = station[@"countryTitle"];
