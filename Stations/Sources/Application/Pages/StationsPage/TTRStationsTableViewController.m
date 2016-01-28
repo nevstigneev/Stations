@@ -142,6 +142,9 @@
         [self refreshTable];
         return;
     }
+    
+    // фильтрация массива в фоновом потоке на основании поискового запроса
+    
     NSPredicate *stationPredicate = [NSPredicate predicateWithFormat:@"stationTitle CONTAINS[c] %@", searchString];
     NSPredicate *cityPredicate = [NSPredicate predicateWithFormat:@"stations.@count > 0"];
     [self.stationFetcher fetchStationsFromFileWithCompletion:^(NSArray<TTRCity *> *data, NSError *error) {

@@ -10,6 +10,8 @@
 
 @implementation TTRStation
 
+// невозможно создать экземпляр модели, не передав необходимые параметры
+
 - (instancetype)init {
     @throw [NSException
             exceptionWithName:NSInternalInconsistencyException
@@ -36,6 +38,7 @@
     return self;
 }
 
+// подробное сравнение для корректного unit-тестирования
 - (BOOL)isEqual:(id)object {
     if ([self class] != [object class]) {
         return NO;

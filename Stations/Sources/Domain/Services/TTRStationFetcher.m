@@ -25,6 +25,8 @@ typedef NS_ENUM (NSInteger, TTRStationsError) {
 
 @implementation TTRStationFetcher
 
+// невозможно создать экземпляр сервиса, не указав тип городов для получения
+
 - (instancetype)init {
     @throw [NSException
             exceptionWithName:NSInternalInconsistencyException
@@ -46,6 +48,7 @@ typedef NS_ENUM (NSInteger, TTRStationsError) {
     return self;
 }
 
+// метод, вызывающий парсинг данных и передающий готовый массив на верхние слои
 - (void)fetchStationsFromFileWithCompletion:(void (^)(NSArray<TTRCity *> *data, NSError *error))completionHandler {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"allStations" ofType:@"json"];

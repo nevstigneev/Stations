@@ -21,6 +21,7 @@
 @implementation TTRStationDetailViewController
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
     [self setupNavigationBar];
     [self setupLabels];
 }

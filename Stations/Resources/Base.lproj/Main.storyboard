@@ -9,6 +9,7 @@
         <!--О приложении-->
         <scene sceneID="sXJ-lZ-26e">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sdd-Ga-rvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="AkI-3e-A4K" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5pJ-fi-DmS"/>
@@ -17,11 +18,30 @@
                     <view key="view" contentMode="scaleToFill" id="SvB-Og-obF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Версия 1.0 от 28 января 2016 г. " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Sd-Zv-ZJ1">
+                                <rect key="frame" x="166" y="238" width="268" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2016 Nikolay Evstigneev" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjM-H7-pLw">
+                                <rect key="frame" x="198" y="268" width="205" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Sd-Zv-ZJ1" firstAttribute="centerX" secondItem="SvB-Og-obF" secondAttribute="centerX" id="2ax-bA-yFg"/>
+                            <constraint firstItem="mjM-H7-pLw" firstAttribute="centerX" secondItem="SvB-Og-obF" secondAttribute="centerX" id="BKw-xJ-IdW"/>
+                            <constraint firstItem="mjM-H7-pLw" firstAttribute="top" secondItem="0Sd-Zv-ZJ1" secondAttribute="bottom" constant="8" id="czL-Ex-uQE"/>
+                            <constraint firstItem="0Sd-Zv-ZJ1" firstAttribute="top" secondItem="5pJ-fi-DmS" secondAttribute="bottom" constant="218" id="vfv-Pu-HDj"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="О приложении" image="info" id="1MB-1u-PCu"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sdd-Ga-rvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="786" y="792"/>
         </scene>

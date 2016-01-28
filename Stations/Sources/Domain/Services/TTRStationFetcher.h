@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "TTRConstants.h"
 
+// сервис для получения станций, сгруппированных по городам
+
 @class TTRCity;
 
 @interface TTRStationFetcher : NSObject

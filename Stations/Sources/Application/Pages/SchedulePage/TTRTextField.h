@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+// кастомный UITextField с кнопкой
+
 @protocol TTRTextFieldDelegate;
 
 @interface TTRTextField : UITextField
