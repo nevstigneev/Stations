@@ -10,6 +10,13 @@
 #import "TTRCity.h"
 #import "TTRStation.h"
 
+NSString *const TTRStationsErrorDomain = @"TTRStationsErrorDomain";
+
+typedef NS_ENUM (NSInteger, TTRStationsError) {
+    TTRStationsErrorFileReading,
+    TTRStationsErrorJsonParsing
+};
+
 @interface TTRStationFetcher ()
 
 @property (copy, nonatomic, readonly) NSString *citiesTypeKey;
@@ -19,7 +26,12 @@
 @implementation TTRStationFetcher
 
 - (instancetype)init {
-    @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"Precondition failed." userInfo:nil];
+    @throw [NSException
+            exceptionWithName:NSInternalInconsistencyException
+            reason:[NSString stringWithFormat:@"Unexpected deadly init invokation '%@', use %@ instead.",
+                    NSStringFromSelector(_cmd),
+                    NSStringFromSelector(@selector(initWithCitiesType:))]
+            userInfo:nil];
 }
 
 - (instancetype)initWithCitiesType:(TTRCitiesType)type {
@@ -39,10 +51,9 @@
         NSError *error = nil;
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"allStations" ofType:@"json"];
         NSData *dataFromFile = [NSData dataWithContentsOfFile:filePath];
-        NSDictionary *data = [NSJSONSerialization JSONObjectWithData:dataFromFile options:kNilOptions error:&error];
         NSArray<TTRCity *> *cities = nil;
-        if (!error) {
-            cities = [self parseCities:data error:&error];
+        if (dataFromFile) {
+            cities = [self parseCities:dataFromFile error:&error];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             if (!error) {
@@ -56,24 +67,27 @@
 
 #pragma mark - Private
 
-- (NSArray<TTRCity *> *)parseCities:(NSDictionary *)data error:(NSError **)error {
-    NSArray *citiesFrom = data[self.citiesTypeKey];
-    NSMutableArray<TTRCity *> *result = [[NSMutableArray alloc] init];
-    for (NSDictionary *city in citiesFrom) {
-        NSString *countryTitle = city[@"countryTitle"];
-        NSDictionary *pointDictionary = city[@"point"];
-        TTRPoint point = {[pointDictionary[@"longitude"] doubleValue], [pointDictionary[@"latitude"] doubleValue]};
-        NSString *districtTitle = city[@"districtTitle"];
-        NSInteger cityId = [city[@"cityId"] integerValue];
-        NSString *cityTitle = city[@"cityTitle"];
-        NSString *regionTitle = city[@"regionTitle"];
-        NSArray *stations = city[@"stations"];
-        NSArray<TTRStation *> *resultStations = [self parseStations:stations error:error];
-        TTRCity *city = [[TTRCity alloc] initWithCountryTitle:countryTitle point:point districtTitle:districtTitle cityId:cityId
-                                                    cityTitle:cityTitle regionTitle:regionTitle stations:resultStations];
-        [result addObject:city];
+- (NSArray<TTRCity *> *)parseCities:(NSData *)data error:(NSError **)error {
+    @try {
+        NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:error];
+        NSArray *citiesFrom = JSON[self.citiesTypeKey];
+        NSMutableArray<TTRCity *> *result = [[NSMutableArray alloc] init];
+        for (NSDictionary *city in citiesFrom) {
+            NSString *countryTitle = city[@"countryTitle"];
+            NSInteger cityId = [city[@"cityId"] integerValue];
+            NSString *cityTitle = city[@"cityTitle"];
+            NSArray *stations = city[@"stations"];
+            NSArray<TTRStation *> *resultStations = [self parseStations:stations error:error];
+            TTRCity *city = [[TTRCity alloc] initWithCountryTitle:countryTitle cityId:cityId cityTitle:cityTitle stations:resultStations];
+            [result addObject:city];
+        }
+        return result;
     }
-    return result;
+    @catch (NSException *exception) {
+        *error = [NSError errorWithDomain:TTRStationsErrorDomain code:TTRStationsErrorJsonParsing
+                                 userInfo:@{NSLocalizedDescriptionKey: [exception reason]}];
+        return nil;
+    }
 }
 
 - (NSArray<TTRStation *> *)parseStations:(NSArray *)data error:(NSError **)error {

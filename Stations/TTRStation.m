@@ -11,7 +11,12 @@
 @implementation TTRStation
 
 - (instancetype)init {
-    @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"Precondition failed." userInfo:nil];
+    @throw [NSException
+            exceptionWithName:NSInternalInconsistencyException
+            reason:[NSString stringWithFormat:@"Unexpected deadly init invokation '%@', use %@ instead.",
+                    NSStringFromSelector(_cmd),
+                    NSStringFromSelector(@selector(initWithCountryTitle:point:districtTitle:cityId:cityTitle:regionTitle:stationId:stationTitle:))]
+            userInfo:nil];
 }
 
 - (instancetype)initWithCountryTitle:(NSString *)countryTitle point:(TTRPoint)point districtTitle:(NSString *)districtTitle
